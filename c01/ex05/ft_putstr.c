@@ -1,40 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dvavryn <dvavryn@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/07 11:30:24 by dvavryn           #+#    #+#             */
-/*   Updated: 2025/02/07 11:30:45 by dvavryn          ###   ########.fr       */
+/*   Created: 2025/02/07 22:20:39 by dvavryn           #+#    #+#             */
+/*   Updated: 2025/02/08 12:12:48 by dvavryn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-#include <stdio.h>
+#include <unistd.h>
 
-void	ft_ultimate_ft(int *********nbr);
+/*
+void	ft_putstr(char *str);
 
 int	main(void)
 {
-	int	num = 0;
+	char	c[] = "Hello World!";
+	char	*pt = c;
 
-	int	*nbr1 = &num;
-	int	**nbr2 = &nbr1;
-	int	***nbr3 = &nbr2;
-	int	****nbr4 = &nbr3;
-	int	*****nbr5 = &nbr4;
-	int	******nbr6 = &nbr5;
-	int	*******nbr7 = &nbr6;
-	int	********nbr8 = &nbr7;
-	int	*********nbr9 = &nbr8;
-
-	ft_ultimate_ft(nbr9);
-	printf("%i", num);
-	return (0);
+	ft_putstr(pt);
 }
 */
-void	ft_ultimate_ft(int *********nbr)
+void	ft_putstr(char *str)
 {
-	*********nbr = 42;
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	while (j < i)
+	{
+		write(1, &str[j], 1);
+		j++;
+	}
 }

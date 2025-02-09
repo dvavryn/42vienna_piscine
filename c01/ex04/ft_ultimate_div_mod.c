@@ -1,40 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dvavryn <dvavryn@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/07 11:30:24 by dvavryn           #+#    #+#             */
-/*   Updated: 2025/02/07 11:30:45 by dvavryn          ###   ########.fr       */
+/*   Created: 2025/02/07 21:57:30 by dvavryn           #+#    #+#             */
+/*   Updated: 2025/02/07 21:58:59 by dvavryn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 #include <stdio.h>
 
-void	ft_ultimate_ft(int *********nbr);
+void	ft_ultimate_div_mod(int *a, int *b);
 
-int	main(void)
+int main(void)
 {
-	int	num = 0;
+	int i = 42;
+	int i_= i;
+	int j = 8;
+	int j_ = j;
 
-	int	*nbr1 = &num;
-	int	**nbr2 = &nbr1;
-	int	***nbr3 = &nbr2;
-	int	****nbr4 = &nbr3;
-	int	*****nbr5 = &nbr4;
-	int	******nbr6 = &nbr5;
-	int	*******nbr7 = &nbr6;
-	int	********nbr8 = &nbr7;
-	int	*********nbr9 = &nbr8;
+	int *pt1 = &i;
+	int *pt2 = &j;
 
-	ft_ultimate_ft(nbr9);
-	printf("%i", num);
-	return (0);
+	ft_ultimate_div_mod(pt1, pt2);
+	printf("%i / %i = %i | %i R", i_, j_, i, j);
 }
 */
-void	ft_ultimate_ft(int *********nbr)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	*********nbr = 42;
+	int	numa;
+	int	numb;
+	int	result;
+	int	rest;
+
+	if (numb != 0)
+	{
+		numa = *a;
+		numb = *b;
+		result = numa / numb;
+		rest = numa % numb;
+		*a = result;
+		*b = rest;
+	}
 }

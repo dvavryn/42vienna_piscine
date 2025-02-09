@@ -1,38 +1,38 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dvavryn <dvavryn@student.42vienna.com      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/07 18:58:06 by dvavryn           #+#    #+#             */
+/*   Updated: 2025/02/07 19:00:20 by dvavryn          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
 #include <stdio.h>
 
-void ft_swap(int *a, int *b)
-{
-    int numa;
-    int numb;
-
-    numa = *b;
-    numb = *a;
-
-    a = &numa;
-    b = &numb;
-}
+void	ft_swap(int *a, int *b);
 
 int main(void)
 {
-    //-------
-    int a;
-    int a_;
-    int *aa;
+    int a = 4;
+    int b = 3;
 
-    a = 4;
-    a_ = a;
-    aa = &a;
-    //-------
-    int b;
-    int b_;
-    int *bb;
+    int *pta = &a;
+    int *ptb = &b;
 
-    b = 10;
-    b_ = b;
-    bb = &b;
-    //-------
-    ft_swap(aa, bb);
-    a = *aa;
-    b = *bb;
-    printf("a: %i -> %i\nb: %i -> %i\n", a_, a, b_, b);
+    printf("a %i, b %i \n", a,b );
+    ft_swap(pta, ptb);
+    printf("a %i, b %i \n", a,b );
+}
+*/
+void	ft_swap(int *a, int *b)
+{
+	int	buf;
+
+	buf = *a;
+	*a = *b;
+	*b = buf;
 }
