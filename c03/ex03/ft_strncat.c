@@ -23,7 +23,7 @@ int	main (void)
 	ft_strncat(dest, src, nb);
 	printf("%s\n", dest);
 }
- */
+*/
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	int				counter_d;
@@ -38,6 +38,5 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 		dest[counter_d + counter_s] = src[counter_s];
 		counter_s++;
 	}
-	dest[counter_d + nb] = '\0';
 	return (dest);
 }
