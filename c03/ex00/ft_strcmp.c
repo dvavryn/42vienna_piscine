@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include <stdio.h>
+#include <stdio.h>
 
 int	ft_strcmp(char *s1, char *s2);
 
-int	main (void)
+/* int	main (void)
 {
 	char s1[] = "Hello World";
 	char s2[] = "Hello Worlda";
@@ -29,8 +29,8 @@ int	main (void)
 		printf("%s\n%s\n<s1> less than <s2>\n", s1, s2);
 	else
 		printf("%s\n%s\n<s1> greater than <s2>\n",s1 ,s2);
-}
- */
+} */
+
 int	ft_strcmp(char *s1, char *s2)
 {
 	int	counter;

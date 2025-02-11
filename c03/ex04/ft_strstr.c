@@ -37,8 +37,8 @@ char	*ft_strstr(char *str, char *to_find);
 		printf("  strstr   : %s\n", result_lib ? result_lib : "NULL");
 		printf("\n");
 	}
-}
- */
+} */
+
 char	*ft_strstr(char *str, char *to_find)
 {
 	int	c1;

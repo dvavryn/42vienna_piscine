@@ -18,12 +18,12 @@ int	main (void)
 {
 	char dest[40] = "Hello, ";
 	char src[] = "World! Here I am!";
-	unsigned int nb = 5;
+	unsigned int nb = 8;
 
 	ft_strncat(dest, src, nb);
 	printf("%s\n", dest);
 }
-*/
+ */
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	int				counter_d;
