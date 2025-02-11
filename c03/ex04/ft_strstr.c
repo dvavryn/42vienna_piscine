@@ -27,23 +27,22 @@ int	main(void)
 	}
 }
 
-char	*ft_strstr(char *str, char *to_find)
-{
-	int	counter_s;
+char	*ft_strstr(char *str, char *to_find){
+	int counter_s;
 	int	counter_f;
-
+	
 	counter_s = 0;
 	counter_f = 0;
 	while (str[counter_s] != '\0')
 	{
-		if (str[counter_s] == to_find[counter_f])
-		{
-			while (to_find[counter_f] != '\0')
-				counter_f++;
-				printf("%i", counter_f);
-		}
+		if (str[counter_s] == to_find[counter_f] && to_find[counter_f] != '\0')
+			counter_f++;
+		else if (to_find[counter_f] == '\0')
+			break;
 		counter_s++;
-		printf("%i", counter_s);
 	}
-	return (&str[counter_s - counter_f]);
+	if (counter_f > counter_s)
+		return (0);
+	else
+		return (&str[counter_s - counter_f]);
 }

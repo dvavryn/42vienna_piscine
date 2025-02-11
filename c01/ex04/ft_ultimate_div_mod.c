@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
+
 #include <stdio.h>
 
 void	ft_ultimate_div_mod(int *a, int *b);
@@ -28,7 +28,7 @@ int main(void)
 	ft_ultimate_div_mod(pt1, pt2);
 	printf("%i / %i = %i | %i R", i_, j_, i, j);
 }
-*/
+
 void	ft_ultimate_div_mod(int *a, int *b)
 {
 	int	numa;
