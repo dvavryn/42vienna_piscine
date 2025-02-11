@@ -5,8 +5,7 @@ int	ft_strcmp(char *s1, char *s2);
 int	main (void)
 {
 	char s1[] = "Hello World";
-	char s2[] = "Hello World";
-	//char s2[] = "Hello World!";
+	char s2[] = "Hello Worlda";
 
 	int i;
 

@@ -1,4 +1,4 @@
-#include <stdio.h>
+/* #include <stdio.h>
 #include <string.h>
 
 char	*ft_strstr(char *str, char *to_find);
@@ -26,11 +26,12 @@ int	main(void)
 		printf("\n");
 	}
 }
-
-char	*ft_strstr(char *str, char *to_find){
-	int counter_s;
+ */
+char	*ft_strstr(char *str, char *to_find)
+{
+	int	counter_s;
 	int	counter_f;
-	
+
 	counter_s = 0;
 	counter_f = 0;
 	while (str[counter_s] != '\0')
@@ -38,7 +39,7 @@ char	*ft_strstr(char *str, char *to_find){
 		if (str[counter_s] == to_find[counter_f] && to_find[counter_f] != '\0')
 			counter_f++;
 		else if (to_find[counter_f] == '\0')
-			break;
+			break ;
 		counter_s++;
 	}
 	if (counter_f > counter_s)

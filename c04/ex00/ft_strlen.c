@@ -1,18 +1,18 @@
-#include <stdio.h>
+/* #include <stdio.h>
 
 int	ft_strlen(char *str);
 
 int main(void)
 {
-	char s[] = "Hello World";
+	char s[] = "Hello";
 	int i = ft_strlen(s);
 	
 	printf("\"%s\" has %i characters", s, i);
 }
-
-int ft_strlen(char *str)
+ */
+int	ft_strlen(char *str)
 {
-	int counter;
+	int	counter;
 
 	counter = 0;
 	while (str[counter] != '\0')

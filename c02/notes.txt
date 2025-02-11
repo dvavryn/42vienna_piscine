@@ -1,0 +1,6 @@
+ex00 - ex08
+    all working
+    norminette error
+        42 header missing
+
+has to be submitted

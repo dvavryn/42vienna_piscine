@@ -1,4 +1,4 @@
-#include <stdio.h>
+/* #include <stdio.h>
 
 int ft_str_is_alpha(char *str);
 
@@ -13,7 +13,7 @@ int main(void)
 	else if (ret == 1)
 		printf("++ alphabetical\n++ Return 1\n");
 }
-
+ */
 int	ft_str_is_alpha(char *str)
 {
 	int	counter;

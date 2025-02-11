@@ -4,7 +4,7 @@ int ft_str_is_lowercase(char *str);
 
 int main(void)
 {
-	char string[] = "123";
+	char string[] = "abc";
 	int ret = ft_str_is_lowercase(string);
 
 	printf("%s\n", string);

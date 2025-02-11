@@ -4,7 +4,7 @@ int ft_str_is_numeric(char *str);
 
 int main(void)
 {
-	char string[] = "/0123456789:";
+	char string[] = "0123456789";
 	int ret = ft_str_is_numeric(string);
 
 	printf("%s\n", string);

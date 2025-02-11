@@ -1,5 +1,5 @@
 #include <unistd.h>
-
+/*
 void	ft_putstr(char *str);
 
 int main (void)
@@ -7,10 +7,10 @@ int main (void)
     char *c = "Hello World!";
     ft_putstr(c);
 }
-
+ */
 void	ft_putstr(char *str)
 {
-	int counter;
+	int	counter;
 
 	counter = 0;
 	while (str[counter] != '\0')

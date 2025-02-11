@@ -6,7 +6,7 @@ int	main (void)
 {
 	char dest[40] = "Hello, ";
 	char src[] = "World! Here I am!";
-	unsigned int nb = 4;
+	unsigned int nb = 5;
 
 	ft_strncat(dest, src, nb);
 	printf("%s\n", dest);

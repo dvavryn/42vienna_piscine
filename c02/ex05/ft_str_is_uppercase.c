@@ -4,7 +4,7 @@ int ft_str_is_uppercase(char *str);
 
 int main(void)
 {
-	char string[] = "AAZ";
+	char string[] = "aaa";
 	int ret = ft_str_is_uppercase(string);
 
 	printf("%s\n", string);

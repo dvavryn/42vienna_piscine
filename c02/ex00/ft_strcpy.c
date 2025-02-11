@@ -12,15 +12,15 @@ int	main (void)
 	printf("%s", destination);
 }
  */
-char *ft_strcpy(char *dest, char *src)
+char	*ft_strcpy(char *dest, char *src)
 {
-	int counter;
+	int	counter;
 
 	counter = 0;
 	while (src[counter] != '\0')
-	{	
+	{
 		dest[counter] = src[counter];
 		counter++;
 	}
-	return(dest);
+	return (dest);
 }

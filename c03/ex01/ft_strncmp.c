@@ -6,7 +6,7 @@ int	main(void)
 {
 	char s1[] = "Hello";
 	char s2[] = "Hello World";
-	unsigned int i = 5;
+	unsigned int i = 6;
 	int rv;
 
 	rv = ft_strncmp(s1, s2, i);
