@@ -10,56 +10,83 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* #include <stdio.h>
+#include <string.h>
 
-/* 
-	Reproduce the behavipur of the function --strlcat()-- (man strlcat).
-
-	man strlcat()
-
-		strlcat(char *dest, const char *src, size_t size);
-
-		The strlcat() function copy and concatenate strings respectively.
-		It is designed to be a safer, more consistent, and more error prone
-		replacement for strncat(3). Unlike this function, strkcat() takes
-		the full size of the buffer (not just the length) and guarantee to
-		NUL-terminate the result (as long as size is larger than 0 or as long
-		as there is at least one byte free in dst). Note that a byte for the NUL
-		should be included in size. Also note that strlcat() only operate on true
-		"C" strings. This means both src and dst must be NUL-terminated.asm
-
-		The strlcat() function appends the NUL-terminated string src to the end
-		of dst. It will append at most size - 1 bytes, NUL-terminating the result.
-
-
-
-		The strlcat() function returns the total length of the string it tried to
-		create. That means the initial length of dst plus the length of src. While
-		this may seem somewhat confusing, it was done to make truncation detection
-		simple.
-
-		Notre, however, that if strlcat() traverses size character without finding
-		a NUL, the length of the string is considered to be size and the destination
-		string will not be NUL terminated (since there was no space for the NUL).
-		This keeps strlcat() from running off the end of a strin. In practice this
-		should not happen (as it means that either size is incorrect or that dst is
-		not a proper "C" string). The check exists to prevent potential security
-		problems in incorrect code.
-
-		
-		 
- */
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
+int ft_strlen(char *str);
 
-int	main(void)
+int main()
 {
+    char dest[20] = "Hello, ";
+    char src[] = "world!";
+    unsigned int size = 15;
 
+    printf("Testing ft_strlcat vs strlcat\n");
+
+    // Test 1: Vergleich der Ergebnisse
+    char dest_copy1[20];
+    strcpy(dest_copy1, dest);
+    
+    unsigned int result1_ft = ft_strlcat(dest, src, size);
+    unsigned int result1_str = strlcat(dest_copy1, src, size);
+
+    printf("\nTest 1: Normaler Fall\n");
+    printf("ft_strlcat result: %u, ft_strlcat dest: %s\n", result1_ft, dest);
+    printf("strlcat result: %u, strlcat dest: %s\n", result1_str, dest_copy1);
+
+    // Test 2: Buffer zu klein
+    char dest2[10] = "Hi ";
+    char dest_copy2[10];
+    strcpy(dest_copy2, dest2);
+    unsigned int size2 = 5;
+
+    unsigned int result2_ft = ft_strlcat(dest2, src, size2);
+    unsigned int result2_str = strlcat(dest_copy2, src, size2);
+
+    printf("\nTest 2: Buffer zu klein\n");
+    printf("ft_strlcat result: %u, ft_strlcat dest: %s\n", result2_ft, dest2);
+    printf("strlcat result: %u, strlcat dest: %s\n", result2_str, dest_copy2);
+
+    return 0;
 }
+ */
+int	ft_strlen(char *str);
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
+	unsigned int	dest_len;
+	unsigned int	src_len;
+	unsigned int	count_d;
+	unsigned int	count_s;
 
+	dest_len = ft_strlen(dest);
+	src_len = ft_strlen(src);
+	count_d = dest_len;
+	count_s = 0;
+	if (size == 0)
+		return (src_len);
+	if (size <= dest_len)
+		return (size + src_len);
+	if (count_d < size)
+	{
+		while (count_d < size - 1 && src[count_s] != '\0')
+		{
+			dest[count_d] = src[count_s];
+			count_d++;
+			count_s++;
+		}
+		dest[count_d] = '\0';
+	}
+	return (dest_len + src_len);
 }
 
+int	ft_strlen(char *str)
+{
+	int	counter;
 
-
-
+	counter = 0;
+	while (str[counter] != '\0')
+		counter++;
+	return (counter);
+}
