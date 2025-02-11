@@ -1,18 +1,5 @@
-ex00 ex01 ex02 ex03
+ex00 ex01 ex02 ex03 ex04
     finished 
-        norminette 
-            42 header missing
-
-ex04
-    norminette 
-        42 header is missing for now
-    not working
-        case 1 +
-        case 2 +
-        case 3 +
-        case 4 -
-        case 5 +
-        case 6 -
 
 ex05 
     not started yet

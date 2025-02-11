@@ -1,9 +1,21 @@
-/* #include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dvavryn <dvavryn@student.42vienna.com      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/11 21:03:48 by dvavryn           #+#    #+#             */
+/*   Updated: 2025/02/11 21:09:36 by dvavryn          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdio.h>
 #include <string.h>
 
 char	*ft_strstr(char *str, char *to_find);
 
-int	main(void)
+/* int	main(void)
 {
 	char	*str = "Hallo, das ist ein Teststring";
 	char	*find[] = {
@@ -29,21 +41,27 @@ int	main(void)
  */
 char	*ft_strstr(char *str, char *to_find)
 {
-	int	counter_s;
-	int	counter_f;
+	int	c1;
+	int	c2;
 
-	counter_s = 0;
-	counter_f = 0;
-	while (str[counter_s] != '\0')
+	c1 = 0;
+	c2 = 0;
+	if (to_find[c2] == '\0')
 	{
-		if (str[counter_s] == to_find[counter_f] && to_find[counter_f] != '\0')
-			counter_f++;
-		else if (to_find[counter_f] == '\0')
-			break ;
-		counter_s++;
+		return (&str[c1]);
 	}
-	if (counter_f > counter_s)
-		return (0);
-	else
-		return (&str[counter_s - counter_f]);
+	while (str[c1] != '\0')
+	{
+		c2 = 0;
+		while (str[c1 + c2] == to_find[c2] && to_find[c2] != '\0')
+		{
+			c2++;
+		}
+		if (to_find[c2] == '\0')
+		{
+			return (&str[c1]);
+		}
+		c1++;
+	}
+	return (NULL);
 }
