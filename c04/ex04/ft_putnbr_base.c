@@ -58,6 +58,7 @@ void	ft_putnbr_base(int nbr, char *base)
 	if (nbr < 0)
 	{
 		write(1, "-", 1);
+		nbr *= -nbr;
 	}
 	if (nbr >= radix)
 	{
