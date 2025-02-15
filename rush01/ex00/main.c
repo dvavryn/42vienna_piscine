@@ -7,7 +7,7 @@ void	ft_eliminate(char matrix[6][6]);
 void	ft_buf_matrix(char buf[6][6], char matrix[6][6]);
 void	ft_blackout_circle(char matrix[6][6]);
 void	ft_cancel_out(char matrix[6][6]);
-int ft_count_spaces_row(char row[6]);
+int 	ft_count_spaces_row(char row[6]);
 void	ft_replace_space_three(char buffer[6][6], char matrix[6][6]);
 
 /* Already fancy edition */
@@ -22,6 +22,17 @@ int	main (void)
 		{'2',' ',' ',' ',' ','3'},
 		{' ','2','1','3','2',' '}
 						};
+
+	/* char	matrix[6][6] = {
+		{' ','3','2','1','2',' '},
+		{'3',' ',' ',' ',' ','2'},
+		{'2',' ',' ',' ',' ','1'},
+		{'1',' ',' ',' ',' ','3'},
+		{'2',' ',' ',' ',' ','2'},
+		{' ','2','1','3','2',' '}
+						}; */
+	ft_print_matrix(matrix);
+	write(1, "\n", 1);
 	ft_check_one(matrix);
 	ft_check_two(matrix);
 	
@@ -37,7 +48,7 @@ void ft_eliminate(char matrix[6][6])
 	ft_cancel_out(buf);
 	ft_replace_space_three(buf, matrix);
 	ft_replace_space_three(buf, matrix);
-	ft_print_matrix(buf);
+	//ft_print_matrix(buf);
 }
 
 void	ft_replace_space_three(char buffer[6][6], char matrix[6][6])
