@@ -1,14 +1,14 @@
-/* #include <stdio.h>
+#include <stdio.h>
 
 int ft_sqrt(int nb);
 
 int	main() {
 	int	result;
 
-	result = ft_sqrt(15);
+	result = ft_sqrt(16);
 	printf("%i", result);
 	return (0);
-} */
+}
 int	ft_sqrt(int nb)
 {
 	double	d;
